@@ -1,0 +1,23 @@
+ingresar:
+ssh -i ssh-key-2022-09-15.key opc@168.138.225.168
+
+apache:
+
+sudo yum install -y httpd  
+sudo systemctl enable httpd
+sudo systemctl restart httpd
+sudo firewall-cmd --add-service=http --permanent
+sudo firewall-cmd --reload
+
+
+git bash:
+sudo yum install git
+cd /var/www/html
+
+Permisos carpeta www:
+
+sudo chmod 777 html
+
+clonar el repositorio:
+
+git clone https://github.com/JhonnyCamilo/cv.git
